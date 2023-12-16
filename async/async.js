@@ -15,3 +15,11 @@ async function getBanana() {
   await delay(3000);
   return "🍌";
 }
+
+async function pickFruits() {
+  const apple = await getApple();
+  const banana = await getBanana();
+  return `${apple} + ${banana}`;
+}
+
+pickFruits().then(console.log);
